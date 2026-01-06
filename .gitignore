@@ -3,12 +3,16 @@ build/
 install/
 log/
 
-# Python cache
+# Python cache (ROS tools & scripts)
 __pycache__/
 *.pyc
+*.py[codz]
+
+# C extensions
+*.so
 
 # VS Code
 .vscode/
 
-# OS
+# OS files
 .DS_Store
