@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'simple_publisher = vedant_py_1.simple_publisher:main'
+            'simple_publisher = vedant_py_1.simple_publisher:main',
+            'simple_subscriber = vedant_py_1.simple_subscriber:main'
         ],
     },
 )
