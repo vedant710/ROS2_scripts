@@ -53,41 +53,34 @@
         <axis xyz="0 1 0"/>
     </joint>
 
-    <link name="castor_front_link">
+    <link name="caster_front_link">
         <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <origin rpy="0 0 0" xyz="0 0 0"/>
-                <mesh filename="package://my_bot_description/meshes/castor_front_link.stl"/>
+                <mesh filename="package://my_bot_description/meshes/caster_front_link.stl"/>
             </geometry>
         </visual>
     </link>
 
-    <joint name="castor_front_joint" type="fixed">
+    <joint name="caster_front_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="castor_front_link"/>
+        <child link="caster_front_link"/>
         <origin rpy="0 0 0" xyz="0.04755 0 -0.0275"/>
     </joint>
     
-    <link name="castor_rear_link">
+    <link name="caster_rear_link">
         <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <origin rpy="0 0 0" xyz="0 0 0"/>
-                <!mesh filename="package://my_bot_description/meshes/castor_rear_link.stl"/>
-                <box size="0.02 0.02 0.02"/>
+                <mesh filename="package://my_bot_description/meshes/caster_rear_link.stl"/>
             </geometry>
         </visual>
     </link>
 
-    <joint name="castor_rear_joint" type="fixed">
+    <joint name="caster_rear_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="castor_rear_link"/>
+        <child link="caster_rear_link"/>
         <origin rpy="0 0 0" xyz="-0.04755 0 -0.0275"/>
     </joint>
-
-    
-    
-
-    
-    
-
 </robot>
+
