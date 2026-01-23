@@ -7,6 +7,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 from launch.substitutions import Command, LaunchConfiguration
 
 def generate_launch_description():
+    my_bot_description_dir = get_package_share_directory("my_bot_description")
 
     model_arg = DeclareLaunchArgument(
         name="model" ,
