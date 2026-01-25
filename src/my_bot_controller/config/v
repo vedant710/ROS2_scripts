@@ -7,11 +7,7 @@ controller_manager:
       type: joint_state_broadcaster/JointStateBroadcaster
 
     simple_velocity_controller:
-      type: velocity_controllers/JointGroupVelocityController
-      
-      
-simple_velocity_controller: 
-  ros__parameters:
-    joints:
-      - wheel_left_joint
-      - wheel_right_joint
+      type: velocity_controllers/JointVelocityController
+      joints:
+        - wheel_left_joint
+        - wheel_right_joint
