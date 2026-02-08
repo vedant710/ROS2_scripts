@@ -54,7 +54,7 @@ def generate_launch_description():
 
         simple_controller_py = Node(
                 package="my_bot_controller",
-                executable="simple_controller",
+                executable="simple_controller.py",
                 parameters=[{"wheel_radius": wheel_radius,
                              "wheel_separation": wheel_separation}],
                 condition= IfCondition(use_python)
@@ -62,7 +62,7 @@ def generate_launch_description():
 
         simple_controller_cpp = Node(
                 package="my_bot_controller",
-                executable="simple_controller",
+                executable="simple_controller.py",
                 parameters=[{"wheel_radius": wheel_radius,
                              "wheel_separation": wheel_separation}],
                 condition=UnlessCondition(use_python)

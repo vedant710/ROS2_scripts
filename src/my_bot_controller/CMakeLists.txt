@@ -24,8 +24,8 @@ install(
 )
 
 install(PROGRAMS
-${PROJECT_NAME}/simple_controller.py
-DESTINATION share/${PROJECT_NAME}
+${CMAKE_CURRENT_SOURCE_DIR}/my_bot_controller/simple_controller.py
+DESTINATION lib/${PROJECT_NAME}
   
 )
 

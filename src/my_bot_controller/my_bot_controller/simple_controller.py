@@ -17,13 +17,14 @@ class SimpleController(Node):
         self.wheel_radius_ = self.get_parameter("wheel_radius").get_parameter_value().double_value
         self.wheel_separation_ = self.get_parameter("wheel_separation").get_parameter_value().double_value
 
-        self.get_logger().info("using wheel radius, %f"% self.wheel_radius_)
-        self.get_logger().info("using wheel separation, %f"% self.wheel_separation_)
+        self.get_logger().info("using wheel_radius %f"% self.wheel_radius_)
+        self.get_logger().info("using wheel_separation %f"% self.wheel_separation_)
 
         self.wheel_cmd_pub_ = self.create_publisher(Float64MultiArray,"simple_velocity_controller/commands", 10)
         self.vel_sub_ = self.create_subscription(TwistStamped, "my_bot_controller/cmd_vel", self.velCallBack, 10)
 
-        self.speed_conversion_ = np.array([[self.wheel_radius_/2, self.wheel_radius_/2], [self.wheel_radius_/self.wheel_separation_, -self.wheel_radius_/self.wheel_separation_]])
+        self.speed_conversion_ = np.array([[self.wheel_radius_/2, self.wheel_radius_/2], 
+                                           [self.wheel_radius_/self.wheel_separation_, -self.wheel_radius_/self.wheel_separation_]])
         
         self.get_logger().info("the conversion matrix is %s" %self.speed_conversion_)
 
@@ -42,6 +43,8 @@ def main():
     rclpy.spin(simple_controller)
     simple_controller.destroy_node()
     rclpy.shutdown()
+
+    
 if __name__ == "__main__":
     main()
 
