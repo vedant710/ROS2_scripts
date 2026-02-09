@@ -1,0 +1,8 @@
+joy__teleop:
+  ros_parameters:
+    move:
+    type: topic
+    interface_type: geometry_msgs/msg/TwistStamped
+    topic_name: my_bot_controller/cmd_vel
+
+    deadman_buttons
