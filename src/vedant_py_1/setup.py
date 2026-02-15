@@ -28,7 +28,9 @@ setup(
             'simple_subscriber = vedant_py_1.simple_subscriber:main',
             'simple_parameter = vedant_py_1.simple_parameter:main',
             'simple_turtlesim_kinematics = vedant_py_1.simple_turtlesim_kinematics:main',
-            'simple_tf_kinematics = vedant_py_1.simple_tf_kinematics:main'
+            'simple_tf_kinematics = vedant_py_1.simple_tf_kinematics:main',
+            'simple_service_server = vedant_py_1.simple_service_server:main'
+
         ],
     },
 )
